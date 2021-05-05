@@ -19,8 +19,9 @@ public class Animal {
     }
 
     public void move() {
-        System.out.println("ANimal move");
+        System.out.println("Animal move");
     }
+
 
     public String getSpecies() {
         return species;
