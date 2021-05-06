@@ -1,6 +1,8 @@
 package com.star.java.oop.inheritance;
 
 public class Dog extends Animal { //is a -> Dog is an Animal
+    // Dog e o subclasa de-a lui Animal
+    // Animal e o superclasa de-a lui Dog
 
     private String name;
 
@@ -30,6 +32,5 @@ public class Dog extends Animal { //is a -> Dog is an Animal
         System.out.println("Dog: " + name + " eats");
         super.eat(); //Ctrl + B
         System.out.println("Dog: " + name + " eats again");
-
     }
 }

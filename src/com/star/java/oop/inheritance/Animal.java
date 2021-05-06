@@ -1,6 +1,6 @@
 package com.star.java.oop.inheritance;
 
-public class Animal {
+public abstract class Animal {
 
     private String species;
 
@@ -21,7 +21,6 @@ public class Animal {
     public void move() {
         System.out.println("Animal move");
     }
-
 
     public String getSpecies() {
         return species;
