@@ -1,0 +1,36 @@
+Write a method to find length of a string.
+Write a method to copy one string to another string.
+Write a method to concatenate two strings.
+Write a method to compare two strings.
+Write a method to convert lowercase string to uppercase.
+Write a method to convert uppercase string to lowercase.
+Write a method to toggle case of each character of a string.
+Write a method to find total number of alphabets, digits or special character in a string.
+Write a method to count total number of vowels and consonants in a string.
+Write a method to count total number of words in a string.
+Write a method to find reverse of a string.
+Write a method to check whether a string is palindrome or not.
+Write a method to reverse order of words in a given string.
+Write a method to find first occurrence of a character in a given string.
+Write a method to find last occurrence of a character in a given string.
+Write a method to search all occurrences of a character in given string.
+Write a method to count occurrences of a character in given string.
+Write a method to find highest frequency character in a string.
+Write a method to find lowest frequency character in a string.
+Write a method to count frequency of each character in a string.
+Write a method to remove first occurrence of a character from string.
+Write a method to remove last occurrence of a character from string.
+Write a method to remove all occurrences of a character from string.
+Write a method to remove all repeated characters from a given string.
+Write a method to replace first occurrence of a character with another in a string.
+Write a method to replace last occurrence of a character with another in a string.
+Write a method to replace all occurrences of a character with another in a string.
+Write a method to find first occurrence of a word in a given string.
+Write a method to find last occurrence of a word in a given string.
+Write a method to search all occurrences of a word in given string.
+Write a method to count occurrences of a word in a given string.
+Write a method to remove first occurrence of a word from string.
+Write a method to remove last occurrence of a word in given string.
+Write a method to remove all occurrence of a word in given string.
+Write a method to trim both leading and trailing white space characters from given string.
+Write a method to remove all extra blank spaces from given string.

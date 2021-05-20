@@ -1,6 +1,8 @@
 package com.star.java.oop.object_class;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Student implements Comparable<Student> {
     private int note;
@@ -21,6 +23,19 @@ public class Student implements Comparable<Student> {
         Arrays.sort(students);
 
         System.out.println(Arrays.toString(students));
+
+        System.out.println(john.equals(bob));
+        Student student = new Student(10, "John", "MIT");
+        System.out.println("john == student -> " + (john == student));        // false
+        System.out.println("john.equals(student) -> " + john.equals(student)); //true
+
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(john);
+        studentList.add(bob);
+        studentList.add(frank);
+        System.out.println(studentList);
+        System.out.println("studentList.contains(student care se numeste John): " + studentList.contains(student));
+
     }
 
     public Student(int note, String name, String faculty) {
@@ -29,7 +44,7 @@ public class Student implements Comparable<Student> {
         this.faculty = faculty;
     }
 
-    @Override
+    @Override //folosita in algoritmii de sortare, colectiile sortate
     public int compareTo(Student student) {
         if (this.note < student.note) {
             return -1;
@@ -72,7 +87,16 @@ public class Student implements Comparable<Student> {
                 '}';
     }
 
-    public boolean equals() {
-        return false;
+    public boolean equals(Object o) {
+        if (o == null) return false;
+
+        if (!(o instanceof Student)) return false;
+        //cast se poate face atunci cand instanceof returneaza true
+
+        Student s = (Student) o; //ca sa putem accesa metodele si proprietatile din Student
+
+        String name = s.getName();
+
+        return this.name.equals(name);//String are propriul algoritm de egalitate
     }
 }
