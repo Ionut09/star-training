@@ -4,6 +4,7 @@ import com.star.java.oop.object_class.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Lists {
@@ -19,7 +20,7 @@ public class Lists {
         students[2] = newbie;
         System.out.println(Arrays.toString(students));
 
-        List<Student> students1 = new ArrayList<>();
+        List<Student> students1 = new LinkedList<>();
         //adaugam intr-o lista
         students1.add(john);
         students1.add(bob);
