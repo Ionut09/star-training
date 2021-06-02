@@ -195,7 +195,6 @@ public class StringAPI {
                     chars[i] = toUpperCase(currentChar);
                 }
             }
-
         }
         return new String(chars);
     }
