@@ -26,7 +26,7 @@ public class TryCatch {
         }
 
         System.out.println("After the try catch. All good: " + parsedInt);
-        throwsChecked();
+        throwsChecked(); //handle or declare rule
         throwsUnchecked();
     }
 

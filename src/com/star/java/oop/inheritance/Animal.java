@@ -8,6 +8,8 @@ public abstract class Animal {
 
     private double weight;
 
+    private boolean canSwim;
+
     public Animal(String species, int size, double weight) {
         this.species = species;
         this.size = size;
@@ -44,5 +46,13 @@ public abstract class Animal {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public boolean canSwim() {
+        return canSwim;
+    }
+
+    public void setCanSwim(boolean canSwim) {
+        this.canSwim = canSwim;
     }
 }
