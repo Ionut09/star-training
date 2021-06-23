@@ -1,5 +1,6 @@
 package com.star.java.oop.streams.lambdas;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
@@ -22,8 +23,10 @@ public class FlatMap {
 
         System.out.println("chraracters = " + chraracters);
 
-        exerciseSlide(Arrays.asList("Toby", "Anna", "Leroy", "Alex", "Jamie"));
+//        exerciseSlide(Arrays.asList("Toby", "Anna", "Leroy", "Alex", "Jamie"));
         //Exe
+
+        lazyEvaluation();
     }
 
     /**
@@ -36,5 +39,21 @@ public class FlatMap {
              .sorted()
              .limit(2)
              .forEach((String name) -> System.out.println(name)); //    void accept(T t); unde T e String
+    }
+
+    public static void lazyEvaluation() {
+        List<String> words = new ArrayList<>();
+
+        words.addAll(List.of("one", "two", "three"));
+
+        Stream<String> stringStream = words.stream()
+                                           .filter(s -> s.length() == 3)
+                                           .map(s -> s.toUpperCase())
+                                           .sorted();
+
+        words.add("bye");
+        words.add("hey");
+
+        stringStream.forEach(x -> System.out.println(x));
     }
 }

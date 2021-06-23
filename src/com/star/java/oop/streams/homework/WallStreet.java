@@ -2,6 +2,7 @@ package com.star.java.oop.streams.homework;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WallStreet {
     static Trader raoul = new Trader("Raoul", "Cambridge");
@@ -32,6 +33,30 @@ public class WallStreet {
      8. Find the transaction with the smallest value.
      */
     public static void main(String[] args) {
+        System.out.println(ex4());
+        System.out.println("Are traders from Milan? " + ex5());
+        ex6();
+    }
 
+    private static String ex4() {
+        return transactions.stream()
+                           .map(transaction -> transaction.getTrader().getName())
+                           .distinct()
+                           .sorted()
+                           .collect(Collectors.joining("\n"));
+    }
+
+    private static boolean ex5() {
+        return transactions.stream()
+                           .anyMatch(transaction -> "Milan".equals(transaction.getTrader().getCity()));
+    }
+
+    private static void ex6() {
+        int sum = transactions.stream()
+                              .filter(transaction -> "Cambridge".equals(transaction.getTrader().getCity()))
+                              .mapToInt(transaction -> transaction.getValue())
+//                             .forEach(tr -> System.out.println(tr.getValue()));
+                              .sum();
+        System.out.println("sum = " + sum);
     }
 }
