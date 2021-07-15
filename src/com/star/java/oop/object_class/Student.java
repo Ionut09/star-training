@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Student implements Comparable<Student> {
+public class Student {// implements Comparable<Student> {
+
     private int note;
 
     private String name;
@@ -44,7 +45,10 @@ public class Student implements Comparable<Student> {
         this.faculty = faculty;
     }
 
-    @Override //folosita in algoritmii de sortare, colectiile sortate
+    public Student() {
+    }
+
+    //@Override //folosita in algoritmii de sortare, colectiile sortate
     public int compareTo(Student student) {
         if (this.note < student.note) {
             return -1;
@@ -98,5 +102,10 @@ public class Student implements Comparable<Student> {
         String name = s.getName();
 
         return this.name.equals(name);//String are propriul algoritm de egalitate
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
     }
 }
